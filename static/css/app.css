@@ -1,0 +1,14 @@
+:root{--ink:#172033;--muted:#697386;--line:#e8ecf2;--surface:#f5f7fb}body{background:var(--surface);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}.sidebar{background:#fff;min-height:calc(100vh - 56px);border-right:1px solid var(--line)}.sidebar a{display:block;padding:.65rem .8rem;border-radius:.6rem;color:#4b5565;text-decoration:none;font-size:.92rem}.sidebar a:hover{background:#f0f4ff;color:#1749b5}.module-card{display:block;height:100%;background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.25rem;text-decoration:none;color:inherit;transition:.15s}.module-card:hover{transform:translateY(-2px);box-shadow:0 12px 30px #1c2b4a12;border-color:#cbd7f7}.module-icon,.brand-icon{width:46px;height:46px;border-radius:13px;background:#eaf0ff;color:#2456c5;display:grid;place-items:center;font-size:1.35rem;margin-bottom:1rem}.login-wrap{min-height:100vh;display:grid;place-items:center;padding:1.5rem;background:linear-gradient(135deg,#eef3ff,#f8fafc)}.login-card{width:min(100%,430px);padding:2.2rem;background:#fff;border:1px solid var(--line);border-radius:1.2rem;box-shadow:0 20px 60px #17203312}.brand-icon{margin:0 auto;background:#1f4fbf;color:white;width:58px;height:58px;font-size:1.7rem}.metric-card{background:#fff;border:1px solid var(--line);border-radius:1rem;padding:1.4rem}.card{border-radius:1rem}.table thead th{font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;color:#697386;background:#f8f9fc;white-space:nowrap}.form-control,.form-select{border-color:#dce2ec}.form-control:focus,.form-select:focus{border-color:#8ca8ef;box-shadow:0 0 0 .2rem #315fce1c}@media(max-width:991px){.sidebar{min-height:auto;border:0;border-bottom:1px solid var(--line);display:flex;gap:.25rem;overflow:auto;white-space:nowrap;padding:.6rem!important}.sidebar a{display:inline-block}}
+
+/* Componentes da interface MVC */
+.record-card,.form-panel,.metric-card{background:#fff;border:1px solid #e8edf3;border-radius:14px;padding:1.25rem;box-shadow:0 4px 16px rgba(25,42,70,.045)}
+.record-card{display:flex;flex-direction:column;min-height:190px;transition:transform .15s ease,box-shadow .15s ease}
+.record-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(25,42,70,.09)}
+.record-secondary{padding:.75rem;background:#f7f9fc;border-radius:9px}
+.stat-label{font-size:.72rem;color:#758195;text-transform:uppercase;letter-spacing:.04em}
+.stat-value{font-weight:700;font-size:1.05rem;color:#24334a;overflow-wrap:anywhere}
+.empty-state{background:#fff;border:1px dashed #cbd5e1;border-radius:14px;padding:3rem 1rem;text-align:center;color:#64748b}
+.empty-state>i{font-size:2rem;display:block;margin-bottom:.75rem}
+.form-panel{padding:1.5rem}
+.form-label{color:#344256}
+@media(max-width:991px){.sidebar{min-height:auto;border-right:0;border-bottom:1px solid #e8edf3}.sidebar a{display:inline-block;margin-right:.6rem}}
