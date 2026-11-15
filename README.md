@@ -48,3 +48,23 @@ Pedidos e notas de compra/venda permanecem somente leitura. Não foi criada emis
 ## Validação
 
 A estrutura foi compilada e verificada estaticamente. O teste de integração com MySQL depende de credenciais e de uma cópia do banco real; faça essa validação antes de colocar em produção.
+
+## Testes automatizados
+
+A suíte fica em `tests/` e usa `pytest`. Os testes unitários cobrem autenticação/hash de senha, permissões e transformação dos dados dos formulários. Os testes de integração exercitam o cliente HTTP do Flask (sessão, login/logout, CSRF, autorização e fluxo de cadastro), substituindo a fronteira MySQL por doubles para que sejam repetíveis e não alterem dados reais.
+
+Para executar:
+
+```bash
+pip install -r requirements.txt
+pytest -v
+```
+
+Para gerar relatório de cobertura (opcional):
+
+```bash
+pip install pytest-cov
+pytest --cov=app --cov-report=term-missing
+```
+
+Os testes não conectam ao MySQL. Antes de produção, recomenda-se complementar a suíte com testes de repositório contra um banco MySQL exclusivo de testes, criado a partir do schema/migrações do projeto. Nunca aponte testes automatizados para o banco de produção.
